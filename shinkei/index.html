@@ -11,30 +11,44 @@
   <title>しんけいすいじゃく</title>
   <style>
     #panel {
-      width: 310px;
-      height: 340px;
+      width: 540px;
+      height: 510px;
       overflow: hidden;
     }
 
     .card {
-      width: 60px;
-      height: 80px;
-      line-height: 80px;
+      width: 100px;
+      height: 120px;
+      line-height: 120px;
       border: 1px solid silver;
       border-radius: 10px;
       text-align: center;
       font-size: 26px;
       font-weight: bold;
-      box-shadow: gray 2px 2px;
+      /* box-shadow: gray 2px 2px; */
+      box-sizing: border-box;
       background: white;
       float: left;
       cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .card:nth-child(5n) {
+      margin-right: 0;
+    }
+    .card:nth-child(4n) {
+      margin-bottom: 0;
     }
 
     /* 裏の状態 */
     .back {
-      background-image: url('img/back.png');
+      /* background-image: url('img/back.png'); */
+      background-color: #eee;
       background-size: 60px 80px;
+      transition-duration: .2s;
+    }
+    .back:hover {
+      background-color: #ddd;
     }
 
     /* 終了時 */
