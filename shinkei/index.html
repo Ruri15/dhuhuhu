@@ -116,7 +116,7 @@
     // 開始時刻を取得
     startTime = new Date();
     // タイマー開始
-    startTimer();
+    // startTimer();
 
   }
 
@@ -192,21 +192,21 @@
     }
   }
 
-  // タイマー開始
-  function startTimer() {
-    timer = setInterval(showSecond, 1000);
-  }
+  // // タイマー開始
+  // function startTimer() {
+  //   timer = setInterval(showSecond, 1000);
+  // }
 
-  // 秒数表示
-  function showSecond() {
+  // // 秒数表示
+  // function showSecond() {
 
-    var nowTime = new Date();
-    var elapsedTime = Math.floor((nowTime - startTime) / 1000);
-    var str = '経過秒数: ' + elapsedTime + '秒';
+  //   var nowTime = new Date();
+  //   var elapsedTime = Math.floor((nowTime - startTime) / 1000);
+  //   var str = '経過秒数: ' + elapsedTime + '秒';
 
-    var re = document.getElementById('result');
-    re.innerHTML = str;
-  }
+  //   var re = document.getElementById('result');
+  //   re.innerHTML = str;
+  // }
 </script>
 
 </html>
