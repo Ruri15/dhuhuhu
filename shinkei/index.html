@@ -51,8 +51,21 @@
 
     /* 終了時 */
     .finish {
-      opacity: 0;
+      background-color: pink;
       cursor: default;
+      position: relative;
+    }
+    .finish::after {
+      color: #fff;
+      content: "^o^";
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      line-height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     /* 経過秒数 */
