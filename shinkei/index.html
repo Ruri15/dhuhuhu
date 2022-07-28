@@ -17,21 +17,21 @@
     }
 
     .card {
-      width: 100px;
-      height: 120px;
-      line-height: 120px;
+      background-color: #fff;
       border: 1px solid silver;
       border-radius: 10px;
-      text-align: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      float: left;
       font-size: 26px;
       font-weight: bold;
-      /* box-shadow: gray 2px 2px; */
-      box-sizing: border-box;
-      background: white;
-      float: left;
-      cursor: pointer;
+      line-height: 120px;
       margin-right: 10px;
       margin-bottom: 10px;
+      text-align: center;
+      transition-duration: .2s;
+      height: 120px;
+      width: 100px;
     }
     .card:nth-child(5n) {
       margin-right: 0;
@@ -44,8 +44,6 @@
     .back {
       /* background-image: url('img/back.png'); */
       background-color: #eee;
-      background-size: 60px 80px;
-      transition-duration: .2s;
     }
     .back:hover {
       background-color: #ddd;
@@ -58,10 +56,10 @@
     }
 
     /* 経過秒数 */
-    #result {
+    /* #result {
       font-size: 1.2em;
       font-weight: bold;
-    }
+    } */
   </style>
 </head>
 
