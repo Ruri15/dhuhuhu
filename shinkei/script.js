@@ -48,7 +48,7 @@ window.onload = function () {
     cards.push(div);
   }
   // 開始時刻を取得
-  startTime = new Date();
+  // startTime = new Date();
   // タイマー開始
   // startTimer();
 
@@ -106,6 +106,7 @@ function turn(e) {
         backTimer = NaN;
 
         if (countUnit == 10) {
+          console.log('10');
           clearInterval(timer);  // timer終了
         }
       }, 500)
