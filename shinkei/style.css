@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* 多さっぱにリセット */
+html, body, h1, p, div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  padding: 15px;
+}
+
+/* ----- */
+.container {
+  margin: auto;
+  text-align: center;
+  width: 540px;
+}
+
+#panel {
+  height: 510px;
+  width: 540px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid silver;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  float: left;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 120px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition-duration: .2s;
+  height: 120px;
+  width: 100px;
+}
+.card:nth-child(5n) {
+  margin-right: 0;
+}
+.card:nth-child(4n) {
+  margin-bottom: 0;
+}
+
+/* 裏の状態 */
+.back {
+  /* background-image: url('img/back.png'); */
+  background-color: #eee;
+}
+.back:hover {
+  background-color: #ddd;
+}
+
+/* 終了時 */
+.finish {
+  background-color: pink;
+  cursor: default;
+  position: relative;
+}
+.finish::after {
+  background-color: rgba(100,100,100,0.3);
+  color: #fff;
+  content: "済";
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button {
+  background-color: #ffa500;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  width: 50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px 10px 8px;
+  transition-duration: .2s;
+}
+.button:hover {
+  background-color: #feb428;
+  box-shadow: 0 5px 10px rgba(100,100,100,0.2);
+}
+
+/* 経過秒数 */
+/* #result {
+  font-size: 1.2em;
+  font-weight: bold;
+} */
