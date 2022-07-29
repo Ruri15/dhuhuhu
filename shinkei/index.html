@@ -28,6 +28,7 @@
       line-height: 120px;
       margin-right: 10px;
       margin-bottom: 10px;
+      overflow: hidden;
       text-align: center;
       transition-duration: .2s;
       height: 120px;
@@ -56,13 +57,14 @@
       position: relative;
     }
     .finish::after {
+      background-color: rgba(100,100,100,0.3);
       color: #fff;
-      content: "^o^";
+      content: "済";
       display: block;
       height: 100%;
       width: 100%;
       text-align: center;
-      line-height: 100px;
+      line-height: 120px;
       position: absolute;
       top: 0;
       left: 0;
@@ -155,8 +157,9 @@
 
     // 裏向きのカードをクリックした場合は数字を表示する
     if (div.innerHTML == '') {
+      imgHTML = '<img src="./img/' + div.number + '.jpg" alt="">';
       div.className = 'card';
-      div.innerHTML = div.number;
+      div.innerHTML = imgHTML;
     } else {
       // 数字が表示されているカードは return
       return;
