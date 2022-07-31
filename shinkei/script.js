@@ -47,10 +47,6 @@ window.onload = function () {
     panel.appendChild(div);
     cards.push(div);
   }
-  // 開始時刻を取得
-  // startTime = new Date();
-  // タイマー開始
-  // startTimer();
 
 }
 
@@ -93,6 +89,11 @@ function turn(e) {
     // フラグ変更
     flgFirst = false;
 
+    // 開始時刻を取得
+    startTime = new Date();
+    //タイマー開始
+    startTimer();
+
     // 2枚目の処理
   } else {
 
@@ -128,18 +129,18 @@ function turn(e) {
   }
 }
 
-// // タイマー開始
-// function startTimer() {
-//   timer = setInterval(showSecond, 1000);
-// }
+// タイマー開始
+function startTimer() {
+  timer = setInterval(showSecond, 1000);
+}
 
-// // 秒数表示
-// function showSecond() {
+// 秒数表示
+function showSecond() {
 
-//   var nowTime = new Date();
-//   var elapsedTime = Math.floor((nowTime - startTime) / 1000);
-//   var str = '経過秒数: ' + elapsedTime + '秒';
+  var nowTime = new Date();
+  var elapsedTime = Math.floor((nowTime - startTime) / 1000);
+  var str = '経過秒数: ' + elapsedTime + '秒';
 
-//   var re = document.getElementById('result');
-//   re.innerHTML = str;
-// }
+  var re = document.getElementById('result');
+  re.innerHTML = str;
+}
