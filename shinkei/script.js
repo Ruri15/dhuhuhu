@@ -48,6 +48,7 @@ window.onload = function () {
     cards.push(div);
   }
 
+
 }
 
 // シャッフル用関数
@@ -64,10 +65,20 @@ function shuffle(arr) {
   return arr;
 }
 
+
+var countNum = 0;
+
 // クリック時の処理
 function turn(e) {
-
   var div = e.target;
+  countNum++;
+
+  if (countNum == 1) {
+    // 開始時刻を取得
+    startTime = new Date();
+    //タイマー開始
+    startTimer();
+  }
 
   // カードのタイマー処理が動作中は return
   if (backTimer) return;
@@ -88,11 +99,6 @@ function turn(e) {
     cardFirst = div;
     // フラグ変更
     flgFirst = false;
-
-    // 開始時刻を取得
-    startTime = new Date();
-    //タイマー開始
-    startTimer();
 
     // 2枚目の処理
   } else {
