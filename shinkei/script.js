@@ -113,7 +113,6 @@ function turn(e) {
         backTimer = NaN;
 
         if (countUnit == 10) {
-          console.log('10');
           clearInterval(timer);  // timer終了
         }
       }, 500)
